@@ -21,11 +21,11 @@ export class RegisterDto {
 
   @ApiProperty({
     example: 'john@example.com',
-    description: 'User email address (optional)',
+    description: 'User email address',
     required: false,
   })
   @IsEmail()
-  @ValidateIf((o) => o.email !== '') // Validate only if the email is provided
+  @ValidateIf((o) => o.email !== '')
   email?: string;
 
   @ApiProperty({

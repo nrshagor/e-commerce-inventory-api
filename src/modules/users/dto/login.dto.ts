@@ -10,7 +10,7 @@ import {
 export class LoginDto {
   @ApiProperty({
     example: 'john@example.com',
-    description: 'User email address (optional)',
+    description: 'User email address ',
     required: false,
   })
   @IsEmail()
