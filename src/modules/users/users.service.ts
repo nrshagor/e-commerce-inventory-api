@@ -26,4 +26,10 @@ export class UsersService {
     });
     return this.usersRepository.save(user);
   }
+
+  async findByEmail(email: string | undefined) {
+    return this.usersRepository.findOne({
+      where: [{ email: email }],
+    });
+  }
 }
